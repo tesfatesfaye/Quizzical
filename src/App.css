@@ -1,0 +1,148 @@
+body{
+    background-color: var(--mainbackgroud);
+    }
+
+.App{
+     display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+ .not-displayed{
+    display: none;
+ }   
+.starterParent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    
+    
+}
+.unseen{
+    display: none;
+    
+}
+.quiz-title{
+font-family: 'karla', sans-serif;
+color: var(--darkblue);
+font-weight: 700;
+line-height: 10.53px;
+
+}
+.quiz-subtitle{
+    font-family: 'Inter', sans-serif;
+    color: var(--darkblue);
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: 30px;
+}
+.home-button{
+    width: 200px;
+    font-family: 'Inter', sans-serif;
+    color: #F5F7FB;
+    height: 50px;
+    background-color: var(--buttonbackground);
+    border-radius: 15px;
+    border-width: thin;
+    border-color: var(--mainbackgroud);
+    cursor: pointer;
+    
+}
+
+.quiz-GrandParent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    /* height: 60vh; */
+    margin-top: 70px;
+    justify-content: center;
+    margin-bottom: 5%;
+    
+}
+
+.submit-button{
+    display: flex;
+    /* margin-left: auto;
+    margin-right: auto; */
+    align-items: center;
+    justify-content:center ;
+    cursor: pointer;  
+/* box-sizing: border-box; */
+    background: #4D5B9E;
+border: 1px solid white;
+border-radius: 10px;
+color: #F5F7FB;
+width: 7%;
+padding: 0.75%;
+
+
+}
+
+.blueBack{
+z-index: 1;
+overflow: hidden;
+width: 400px;
+height: 400px;
+position: fixed;
+left: -5%;
+bottom: -2%;
+background: #DEEBF8;
+border-radius:40%;
+transform: rotate(-128.49deg);
+}
+
+.yellowBack{
+z-index: 1;
+overflow: hidden;
+position: fixed;
+background-color:#FFFAD1;
+right: -6%;
+top: 0%;
+border-radius:40%;
+z-index: 0;
+width: 400px;
+height: 400px;
+transform: rotate(-128.49deg);
+;
+}
+
+@media  screen and (max-width: 1100px) {
+    .blueBack {
+      display: none;
+    }
+    .yellowBack{
+        display: none;
+    }
+    
+  }
+  @media  screen and (max-width: 1760px) {
+    .submit-button{
+        box-sizing: border-box;
+         min-width: 90px;
+         min-height: 30px;
+     }
+  }
+
+  .button-parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   width: 100%;
+   gap: 2%;
+  }
+  .score-Text{
+z-index: 90;
+ font-family: 'Inter',sans-serif;
+font-style: normal;
+font-weight: 700;
+text-align: center;
+color: #4D5B9E;
+visibility: visible;
+
+  }
