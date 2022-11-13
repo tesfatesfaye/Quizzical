@@ -11,48 +11,51 @@ const[quizData,setQuizData]=useState(()=>[])
 const[victory,setVictory]=useState(()=>false) //when a user submits their answer
 const [correctPicked,setCorrectPicked]=useState(()=>0)
 const[allIsClicked,setAllIsClicked]=useState(()=>0)
+const [newGame,setNewGame]=useState(()=>false)
+
 
   useEffect(()=>{
       
+    async function getQuiz(){
+      let info=[]
+      const res=await fetch("https://opentdb.com/api.php?amount=5&type=multiple")
+    const data=await res.json()
+   info=data.results
+   
+     let quizHolder=[]
+
+     for(let i=0;i<info.length;i++){
+      
+      quizHolder[i]=({id: nanoid(), value: info[i].question,answers:[]})
+         for(let j=0;j<info[i].incorrect_answers.length;j++){
+        quizHolder[i].answers[j]=({id:nanoid(), value:decodeURI(info[i].incorrect_answers[j]),
+        correct: false, clicked: false
+        })
+      }
+      const placer= Math.floor(Math.random()* (info[i].incorrect_answers.length+1))
+      quizHolder[i].answers.splice(placer,0, {id:nanoid(), value:info[i].correct_answer, correct:true, clicked:false })
+    }
+    console.log(quizHolder)
  
+   
+
+  setQuizData([...quizHolder])
+
+
+
+
+  }
+
   getQuiz()
 
       
 
-  },[victory])
-
-  async function getQuiz(){
-      
-    const res=await fetch("https://opentdb.com/api.php?amount=5&type=multiple")
-  const data=await res.json()
- info=await data.results
-  console.log(info)
-}
-
-let info=[];
+  },[newGame])
 
 
 
-  function populateQuiz(){
 
-    let quizHolder=[]
-
-    for(let i=0;i<info.length;i++){
-    quizHolder[i]=({id: nanoid(), value: info[i].question,answers:[]})
-       for(let j=0;j<info[i].incorrect_answers.length;j++){
-      quizHolder[i].answers[j]=({id:nanoid(), value:info[i].incorrect_answers[j],
-      correct: false, clicked: false
-      })
-    }
-    const placer= Math.floor(Math.random()* (info[i].incorrect_answers.length+1))
-    quizHolder[i].answers.splice(placer,0, {id:nanoid(), value:info[i].correct_answer, correct:true, clicked:false })
-  }
-    console.log(quizHolder)
  
-  setQuizData([...quizHolder])
-  
- }
-
  
 
  function submitAnswers(){
@@ -70,20 +73,15 @@ let info=[];
  }
 function playAgain(){
   setVictory(false)
+  setNewGame(prev=> !prev)
   setCorrectPicked(0)
   setAllIsClicked(0)
-   populateQuiz()
-  
+   
 }
-
 
 function startGame(){
-  setVictory(false)
-  setGameBegin(true)
-  populateQuiz()
-  
-
-}
+ setGameBegin(true)
+  }
 
 
 
@@ -109,7 +107,7 @@ const mapper=quizData.map(x=>{
     
 })
 
-
+ 
 
   return (
     <div className="App">

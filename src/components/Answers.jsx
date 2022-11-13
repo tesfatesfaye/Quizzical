@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import {decode} from 'html-entities';
 import './quiz.css'
 function Answers(props){
    
@@ -44,7 +45,7 @@ function Answers(props){
     
     return(
         <div style={(styles())}onClick={props.victory ?"" : ()=>props.isClicked(props.id)}className="answerDiv">
-            {props.value}
+            {decode(props.value)}
         </div>
     )
 }

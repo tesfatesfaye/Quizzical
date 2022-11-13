@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from "react";
+import {decode} from 'html-entities';
 import './quiz.css'
 import Answers from "./Answers";
 function Quiz(props){
@@ -65,7 +66,7 @@ setCorrectPicked={props.setCorrectPicked}
 return(
     <div className="quiz-parent">
        
-      <h2 className="question-text">{props.question}  </h2>
+      <h2 className="question-text">{decode(props.question)}  </h2>
       <div className="answers">
       {answerMapper}
       </div>
