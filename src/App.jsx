@@ -35,11 +35,10 @@ const [newGame,setNewGame]=useState(()=>false)
       const placer= Math.floor(Math.random()* (info[i].incorrect_answers.length+1))
       quizHolder[i].answers.splice(placer,0, {id:nanoid(), value:info[i].correct_answer, correct:true, clicked:false })
     }
-    console.log(quizHolder)
- 
+   
    
 
-  setQuizData([...quizHolder])
+  setQuizData(quizHolder)
 
 
 

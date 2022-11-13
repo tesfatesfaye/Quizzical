@@ -58,8 +58,7 @@ line-height: 10.53px;
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    /* height: 60vh; */
-    margin-top: 70px;
+     margin-top: 70px;
     justify-content: center;
     margin-bottom: 5%;
     
@@ -67,18 +66,15 @@ line-height: 10.53px;
 
 .submit-button{
     display: flex;
-    /* margin-left: auto;
-    margin-right: auto; */
     align-items: center;
     justify-content:center ;
     cursor: pointer;  
-/* box-sizing: border-box; */
     background: #4D5B9E;
-border: 1px solid white;
-border-radius: 10px;
-color: #F5F7FB;
-width: 7%;
-padding: 0.75%;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: #F5F7FB;
+    width: 7%;
+    padding: 0.75%;
 
 
 }
