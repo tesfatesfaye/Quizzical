@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import {decode} from 'html-entities';
 import './quiz.css'
 function Answers(props){
-   
+   // will the styling using switch statement 
 
     const styles=(()=>{
         

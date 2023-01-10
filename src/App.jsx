@@ -65,6 +65,7 @@ const [newGame,setNewGame]=useState(()=>false)
   }
   else{
     alert(`You have answered ${allIsClicked} out of ${quizData.length} questions. Please answer all of the questions.`)
+    // will use custom hooks and context to check if all is clicked
   }
    
         
