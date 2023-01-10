@@ -1,5 +1,7 @@
 body{
     background-color: var(--mainbackgroud);
+    margin: 0;
+    
     }
 
 .App{
