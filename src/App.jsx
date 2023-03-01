@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import StarterPage from './components/StarterPage'
 import Quiz from './components/Quiz'
 import './App.css'
@@ -14,7 +14,7 @@ const[allIsClicked,setAllIsClicked]=useState(()=>0)
 const [newGame,setNewGame]=useState(()=>false)
 
 
-  useEffect(()=>{
+  useLayoutEffect(()=>{
       
     async function getQuiz(){
       let info=[]
