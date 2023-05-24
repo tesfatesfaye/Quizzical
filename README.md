@@ -42,10 +42,4 @@ The client will automatically run on the first available port.
 - [Vite](https://vitejs.dev/)
 - [Open Trivia Database API](https://opentdb.com/api.php?amount=5&type=multiple)
 
-## Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for more details.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
