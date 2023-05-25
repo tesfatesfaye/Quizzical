@@ -1,4 +1,4 @@
-# Quizzical-
+# Quizzical
 
 
 Quizzical is a front-end quiz game built using React and packaged with Vite. It utilizes the Open Trivia Database API endpoint to generate five multiple-choice questions across various topics.
