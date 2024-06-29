@@ -19,7 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 2. Open your unix shell and clone the repository to a local directory of your choice:
 
     ```bash
-    git clone git@github.com:YOUR_GITHUB_USERNAME/Quizzical.git
+    git clone git@github.com:tesfatesfaye/Quizzical.git
     ```
 
 3. Navigate to the client directory and install the latest version of Vite using npm:
